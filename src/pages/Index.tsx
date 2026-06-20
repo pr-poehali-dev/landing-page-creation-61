@@ -9,9 +9,8 @@ const PORTRAIT =
 
 const NAV = [
   { label: 'Обо мне', href: '#about' },
-  { label: 'Программы', href: '#services' },
-  { label: 'Кейсы', href: '#cases' },
-  { label: 'Тарифы', href: '#pricing' },
+  { label: 'Я предлагаю вам', href: '#services' },
+  { label: 'Цены на услуги', href: '#pricing' },
   { label: 'Контакты', href: '#contacts' },
 ];
 
@@ -53,24 +52,6 @@ const SERVICES = [
     title: 'Коучинг для лидеров',
     text: 'Программа для руководителей: уверенность, влияние и управление командой.',
     format: 'Индивидуально · 12 сессий',
-  },
-];
-
-const CASES = [
-  {
-    result: '+40% к доходу',
-    name: 'Анна, маркетолог',
-    text: 'За 3 месяца перешла на руководящую позицию и пересмотрела отношение к работе.',
-  },
-  {
-    result: 'Запуск бизнеса',
-    name: 'Дмитрий, предприниматель',
-    text: 'Преодолел страх неудачи и открыл собственное агентство, о котором мечтал 5 лет.',
-  },
-  {
-    result: 'Баланс жизни',
-    name: 'Елена, топ-менеджер',
-    text: 'Справилась с выгоранием, восстановила энергию и наладила отношения в семье.',
   },
 ];
 
@@ -152,7 +133,7 @@ const Index = () => {
                 <a href="#contacts">Записаться на консультацию</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-none border-white/30 text-white bg-transparent hover:bg-white/10 hover:text-white">
-                <a href="#services">Мои программы</a>
+                <a href="#services">Я предлагаю вам</a>
               </Button>
             </div>
           </div>
@@ -212,9 +193,9 @@ const Index = () => {
       <section id="services" className="py-24 md:py-32 bg-secondary">
         <div className="container">
           <div className="max-w-2xl mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-accent">Программы</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-accent">Услуги</span>
             <h2 className="font-display text-4xl md:text-5xl font-700 mt-3 text-primary leading-tight">
-              Выберите свой путь
+              Я предлагаю вам
             </h2>
             <p className="mt-4 text-muted-foreground">
               Каждая программа — это структурированная система работы под конкретный запрос.
@@ -239,37 +220,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cases */}
-      <section id="cases" className="py-24 md:py-32">
-        <div className="container">
-          <div className="max-w-2xl mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-accent">Кейсы</span>
-            <h2 className="font-display text-4xl md:text-5xl font-700 mt-3 text-primary leading-tight">
-              Результаты моих клиентов
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {CASES.map((c) => (
-              <div key={c.name} className="bg-primary p-8">
-                <div className="font-display text-3xl font-700 text-accent">{c.result}</div>
-                <p className="mt-5 text-white/70 leading-relaxed">«{c.text}»</p>
-                <div className="mt-6 pt-6 border-t border-white/10 flex items-center gap-3">
-                  <Icon name="User" size={18} className="text-accent" />
-                  <span className="text-sm text-white font-500">{c.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing */}
       <section id="pricing" className="py-24 md:py-32 bg-secondary">
         <div className="container">
           <div className="max-w-2xl mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-accent">Тарифы</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-accent">Цены</span>
             <h2 className="font-display text-4xl md:text-5xl font-700 mt-3 text-primary leading-tight">
-              Форматы работы
+              Цены на услуги
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
